@@ -41,10 +41,16 @@ let g:deoplete#enable_at_startup = 1
 
 "End dein Scripts-------------------------
 
+" display setting
 set number
 set cursorline
 set title
 set showmatch
+
+" colorscheme
+colorscheme gruvbox
+set background=dark
+set t_Co=256
 
 " search setting
 set ignorecase
