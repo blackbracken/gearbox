@@ -15,9 +15,9 @@ if dein#load_state('/home/blackbracken/.cache/dein')
   call dein#add('morhetz/gruvbox')
 
   " Add or remove your plugins here like this:
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('Shougo/deoplete.nvim')
+  " call dein#add('Shougo/neosnippet.vim')
+  " call dein#add('Shougo/neosnippet-snippets')
+  " call dein#add('Shougo/deoplete.nvim')
   " call dein#add('scrooloose/nerdtree')
   call dein#add('vim-airline/vim-airline')
   call dein#add('airblade/vim-gitgutter')
