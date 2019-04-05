@@ -27,3 +27,5 @@ sed -i -e "s/blackbracken/${USER}/" $VIM_CONFIG
 echo "alias vim=nvim" >> $BASH
 
 echo "Setup has been successful! Do not forget to restart terminal."
+
+echo "RESTART TERMINAL!"
