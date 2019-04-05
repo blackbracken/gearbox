@@ -4,12 +4,12 @@ readonly BASH="${HOME}/.bashrc"
 readonly XMODMAP="${HOME}/.xmodmap"
 readonly VIM_CONFIG="${HOME}/.config/nvim/init.vim"
 
-# update archlinux
-sudo pacman -Syu
-
 # essential packages
 sudo pacman -S git
 sudo pacman -S python
+
+# haskell install
+sudo pacman -S stack
 
 # git settings
 git config --global user.name BlackBracken
@@ -29,5 +29,8 @@ rm ./dein_installer.sh
 curl https://raw.githubusercontent.com/blackbracken/dotfiles/master/init.vim > $VIM_CONFIG
 sed -i -e "s/blackbracken/${USER}/" $VIM_CONFIG
 echo "alias vim=nvim" >> $BASH
+
+# update pacman packages
+sudo pacman -Syu
 
 echo "Setup has been successful! Do not forget to restart terminal."
