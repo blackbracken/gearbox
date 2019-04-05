@@ -11,6 +11,10 @@ sudo pacman -Syu
 sudo pacman -S git
 sudo pacman -S python
 
+# git settings
+git config --global user.name BlackBracken
+git config --global user.email me@bracken.black
+
 # rewrite CapsLock to L_Ctrl
 echo "keycode  66 = Control_L Control_L Control_L Control_L" >  $XMODMAP
 echo "remove Lock = Control_L"                               >> $XMODMAP
@@ -27,5 +31,3 @@ sed -i -e "s/blackbracken/${USER}/" $VIM_CONFIG
 echo "alias vim=nvim" >> $BASH
 
 echo "Setup has been successful! Do not forget to restart terminal."
-
-echo "RESTART TERMINAL!"
