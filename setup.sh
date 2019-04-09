@@ -2,20 +2,30 @@
 
 readonly BASH="${HOME}/.bashrc"
 readonly XMODMAP="${HOME}/.xmodmap"
+readonly XPROFILE="${HOME}/.xprofile"
 readonly VIM_CONFIG="${HOME}/.config/nvim/init.vim"
 
 # essential packages
 sudo pacman -S git
-sudo pacman -S python
 
-# haskell install
+# install languages
+sudo pacman -S jre-openjre jdk-openjdk
+sudo pacman -S python
 sudo pacman -S stack
 
 # git settings
 git config --global user.name BlackBracken
 git config --global user.email me@bracken.black
 
-# rewrite CapsLock to L_Ctrl
+# japanize keyboard-layout
+sudo pacman -S otf-ipafont adobe-source-han-sans-otc-fonts 
+sudo pacman -S fcitx-gtk2 fcitx-gtk3 fcitx-qt4
+sudo pacman -S fcitx-im fcitx-mozc
+echo "export GTK_IM_MODULE=fcitx"    >  $XPROFILE
+echo "export QT_IM_MODULE=fcitx"     >> $XPROFILE
+echo "export XMODIFIERS='@IM=fcitx'" >> $XPROFILE
+
+#rewrite CapsLock to L_Ctrl
 echo "keycode  66 = Control_L Control_L Control_L Control_L" >  $XMODMAP
 echo "remove Lock = Control_L"                               >> $XMODMAP
 echo "add Control = Control_L"                               >> $XMODMAP
