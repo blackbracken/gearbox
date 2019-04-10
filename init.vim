@@ -12,7 +12,7 @@ if dein#load_state('/home/blackbracken/.cache/dein')
 
   " Let dein manage dein
   " Required:
-  call dein#add('morhetz/gruvbox')
+  call dein#add('rhysd/vim-color-spring-night')
 
   " Add or remove your plugins here like this:
   " call dein#add('Shougo/neosnippet.vim')
@@ -20,7 +20,7 @@ if dein#load_state('/home/blackbracken/.cache/dein')
   " call dein#add('Shougo/deoplete.nvim')
   " call dein#add('scrooloose/nerdtree')
   call dein#add('vim-airline/vim-airline')
-  call dein#add('airblade/vim-gitgutter')
+  " call dein#add('airblade/vim-gitgutter')
 
   " Required:
   call dein#end()
@@ -51,6 +51,8 @@ set showmatch
 colorscheme gruvbox
 set background=dark
 set t_Co=256
+autocmd ColorScheme * highlight Normal ctermbg=none
+autocmd ColorScheme * highlight LineNr ctermbg=none
 
 " search setting
 set ignorecase
