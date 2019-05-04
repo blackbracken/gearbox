@@ -52,6 +52,14 @@ curl https://raw.githubusercontent.com/blackbracken/dotfiles/master/init.vim > $
 sed -i -e "s/blackbracken/${USER}/" $VIM_CONFIG
 echo "alias vim=nvim" >> $BASHRC
 
+# install Minecraft
+git clone https://aur.archlinux.org/minecraft-launcher.git
+tar -xvf minecraft-launcher.jar
+cd minecraft-launcher/
+makepkg -sic
+cd ~ 
+rm -rf minecraft-launcher/
+
 # add util aliases
 echo "alias :q=exit" >> $BASHRC
 
