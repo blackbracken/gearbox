@@ -18,6 +18,8 @@ sudo pacman -S git
 sudo pacman -S jre-openjre jdk-openjdk
 sudo pacman -S python
 sudo pacman -S stack
+sudo pacman -S npm
+sudo npm -g pug pug-cli sass
 
 # git settings
 git config --global user.name BlackBracken
@@ -54,11 +56,17 @@ echo "alias vim=nvim" >> $BASHRC
 
 # install Minecraft
 git clone https://aur.archlinux.org/minecraft-launcher.git
-tar -xvf minecraft-launcher.jar
 cd minecraft-launcher/
 makepkg -sic
 cd ~ 
 rm -rf minecraft-launcher/
+
+# install Discord
+git clone https://aur.archlinux.org/discord.git
+cd discord/
+makepkg -sic
+cd ~
+rm -rf discord/
 
 # add util aliases
 echo "alias :q=exit" >> $BASHRC
@@ -71,9 +79,9 @@ echo "GitHub settings"
 if grep -F "machine github.com" $NETRC > /dev/null; then
     echo "Skipped bacause the settings found"
 else
-    echo "machine github.com"      >> $NETRC
-    read -p "> username: "         >> $NETRC
-    read -ps  "> password/token: " >> $NETRC
+    echo "machine github.com"     >> $NETRC
+    read -p  "> username: "       >> $NETRC
+    read -ps "> password/token: " >> $NETRC
 fi
 
 echo "Setup has been successful! Do not forget to restart terminal."
