@@ -21,6 +21,9 @@ sudo pacman -S stack
 sudo pacman -S npm
 sudo npm -g pug pug-cli sass
 
+# install fonts
+sudo pacman -S otf-fira-code
+
 # git settings
 git config --global user.name BlackBracken
 git config --global user.email me@bracken.black
