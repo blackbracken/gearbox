@@ -64,6 +64,13 @@ makepkg -sic
 cd ~ 
 rm -rf minecraft-launcher/
 
+# install Slack
+git clone https://aur.archlinux.org/slack-desktop.git
+cd slack-desktop/
+makepkg -sic
+cd ~
+rm -rf slack-desktop/
+
 # install Discord
 git clone https://aur.archlinux.org/discord.git
 cd discord/
