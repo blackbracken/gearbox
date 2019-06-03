@@ -78,6 +78,13 @@ makepkg -sic
 cd ~
 rm -rf discord/
 
+# install Spotify
+git clone https://aur.archlinux.org/spotify.git
+cd spotify/
+makepkg -sic
+cd ~
+rm -rf spotify
+
 # add util aliases
 echo "alias :q=exit" >> $BASHRC
 
