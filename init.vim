@@ -1,60 +1,38 @@
-"dein Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
+call plug#begin('~/.vim/plugged')
+  " color displays
+  Plug 'rhysd/vim-color-spring-night'
+  Plug 'junegunn/vim-emoji'
 
-" Required:
-set runtimepath+=/home/blackbracken/.cache/dein/repos/github.com/Shougo/dein.vim
+  " lines
+  Plug 'itchyny/lightline.vim'
+  Plug 'Yggdroot/indentLine'
 
-" Required:
-if dein#load_state('/home/blackbracken/.cache/dein')
-  call dein#begin('/home/blackbracken/.cache/dein')
+  " highlights
+  Plug 'udalov/kotlin-vim', {'for':['kotlin']}
+  Plug 'elzr/vim-json', {'for':['json']}
 
-  " Let dein manage dein
-  " Required:
-  call dein#add('rhysd/vim-color-spring-night')
-
-  " Add or remove your plugins here like this:
-  " call dein#add('Shougo/neosnippet.vim')
-  " call dein#add('Shougo/neosnippet-snippets')
-  " call dein#add('Shougo/deoplete.nvim')
-  " call dein#add('scrooloose/nerdtree')
-  call dein#add('vim-airline/vim-airline')
-  " call dein#add('airblade/vim-gitgutter')
-
-  " Required:
-  call dein#end()
-  call dein#save_state()
-endif
-
-" Required:
-filetype plugin indent on
-syntax enable
-
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
-
-" For deoplete
-let g:deoplete#enable_at_startup = 1
-
-"End dein Scripts-------------------------
-
-" display setting
-set number
-set cursorline
-set title
-set showmatch
+  Plug 'airblade/vim-gitgutter'
+call plug#end()
 
 " colorscheme
-colorscheme gruvbox
+colorscheme spring-night
+let g:airline_theme = 'spring_night'
+set termguicolors
 set background=dark
 set t_Co=256
 autocmd ColorScheme * highlight Normal ctermbg=none
 autocmd ColorScheme * highlight LineNr ctermbg=none
 
-" search setting
+" emoji
+set completefunc=emoji#complete
+
+" display
+set number
+set cursorline
+set title
+set showmatch
+
+" search
 set ignorecase
 set smartcase
 set wrapscan
@@ -62,7 +40,7 @@ set hls
 set incsearch
 set inccommand=split
 
-" indent setting
+" indent
 set autoindent
 set tabstop=4
 set softtabstop=4
@@ -70,14 +48,14 @@ set shiftwidth=4
 set expandtab
 set smarttab
 
-" cache setting
+" cache
 set noswapfile
 set nobackup
 
-" encode setting
+" encode
 set encoding=utf-8
 set fileencoding=utf-8
 
-" external setting
+" external
 set clipboard=unnamed
 set mouse=a
