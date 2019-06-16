@@ -2,6 +2,7 @@
 
 readonly DOTFILES_REPO="https://raw.githubusercontent.com/blackbracken/dotfiles/master"
 
+sudo pacman -Syu
 sudo pacman --needed -S $(pacman -Qg base-devel | cut -f2 -d " ") \
                         gnome-terminal-fedora \
                         powerline-fonts \
@@ -15,6 +16,12 @@ sudo pacman --needed -S $(pacman -Qg base-devel | cut -f2 -d " ") \
                         python \
                         python-pip \
                         npm \
+
+# wallpaper
+curl -L "$DOTFILES_REPO/wallpaper.b64"
+base64 -d wallpaper.b64 > ~/Pictures/wallpaper.jpg
+rm wallpaper.b64
+gsettings set org.gnome.desktop.background picture-uri ~/Pictures/wallpaper.jpg
 
 # mozc
 fcitx-configtool &
