@@ -3,6 +3,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'rhysd/vim-color-spring-night'
   Plug 'junegunn/vim-emoji'
 
+  " hierarchy
+  Plug 'scrooloose/nerdtree'
+
   " lines
   Plug 'itchyny/lightline.vim'
   Plug 'Yggdroot/indentLine'
@@ -13,6 +16,9 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'airblade/vim-gitgutter'
 call plug#end()
+
+" local keybind
+nnoremap <silent><A-1> :NERDTreeToggle<CR>
 
 " colorscheme
 colorscheme spring-night
