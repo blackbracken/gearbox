@@ -157,3 +157,4 @@ alias :q=exit
 alias :wq=exit
 alias where=which
 alias vim=nvim
+alias oitcc="gcc -std=c89 -Wall -Wextra"

@@ -34,9 +34,18 @@ git config --global user.email me@bracken.black
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 curl -Lo ~/.config/nvim/init.vim "$DOTFILES_REPO/init.vim"
 
+# sdkman
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Kotlin with gradle
+sdk install gradle
+sdk install kotlin
+
 # copy configs
-curl -Lo ~/.bashrc  "$DOTFILES_REPO/.bashrc"
-curl -Lo ~/.xmodmap "$DOTFILES_REPO/.xprofile"
+curl -Lo ~/.bashrc       "$DOTFILES_REPO/.bashrc"
+curl -Lo ~/.bash_profile "$DOTFILES_REPO/.bash_profile"
+curl -Lo ~/.xprofile     "$DOTFILES_REPO/.xprofile"
 
 # install aur packages
 for package in $(echo "jetbrains-toolbox \
