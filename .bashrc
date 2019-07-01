@@ -158,3 +158,8 @@ alias :wq=exit
 alias where=which
 alias vim=nvim
 alias oitcc="gcc -std=c89 -Wall -Wextra"
+alias untar="tar -zxvf"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/blackbracken/.sdkman"
+[[ -s "/home/blackbracken/.sdkman/bin/sdkman-init.sh" ]] && source "/home/blackbracken/.sdkman/bin/sdkman-init.sh"
