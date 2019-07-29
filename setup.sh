@@ -9,12 +9,9 @@ yes | sudo pacman --needed -S $(pacman -Qg base-devel | cut -f2 -d " ") \
                         otf-ipafont \
                         adobe-source-han-sans-otc-fonts \
                         fcitx \
-                        fcitx-gtk2 \
-                        fcitx-gtk3 \
-                        fcitx-qt5 \
-                        fcitx-mozc \
-                        fcitx-configtool \
+                        fcitx-{gtk2,gtk3,qt5,mozc,configtool} \
                         neovim \
+                        go \
                         python \
                         python-pip \
                         npm \
@@ -47,9 +44,12 @@ curl -Lo ~/.xprofile     "$DOTFILES_REPO/.xprofile"
 for package in $(echo "jetbrains-toolbox \
                        slack-desktop \
                        powerline-go"); do
-  git clone "https://aur.archlinux.org/$package.git"
-  cd "./$package"
-  yes | makepkg -si --needed
-  cd "../"
-  rm -rf "$package/"
+    pacman -Qi $package > /dev/null
+    if [ $? -ne 0 ] ; then    
+        git clone "https://aur.archlinux.org/$package.git"
+        cd "./$package"
+        yes | makepkg -si --needed
+        cd "../"
+        rm -rf "$package/"
+    fi
 done
