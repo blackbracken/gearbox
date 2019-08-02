@@ -157,6 +157,7 @@ alias :q=exit
 alias :wq=exit
 alias where=which
 alias vim=nvim
+alias ghci="stack ghci"
 alias gcc.oit="gcc -std=c89 -Wall -Wextra"
 alias ssh.oit="ssh e1n18095@o-vnc.center.oit.ac.jp"
 alias untar="tar -zxvf"
