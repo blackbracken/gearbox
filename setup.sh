@@ -15,6 +15,7 @@ yes | sudo pacman --needed -S $(pacman -Qg base-devel | cut -f2 -d " ") \
                         python \
                         python-pip \
                         npm \
+                        tokei \
 
 # gnome setting
 curl -L "$DOTFILES_REPO/wallpaper.b64" | base64 -d > ~/Pictures/wallpaper.jpg
