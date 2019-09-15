@@ -8,7 +8,6 @@ endif
 call plug#begin('~/.vim/plugged')
   " color displays
   Plug 'rhysd/vim-color-spring-night'
-  Plug 'junegunn/vim-emoji'
 
   " hierarchy
   Plug 'scrooloose/nerdtree'
@@ -23,6 +22,8 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'airblade/vim-gitgutter'
 call plug#end()
+
+" indent
 
 " local keybind
 nnoremap <silent><A-1> :NERDTreeToggle<CR>
@@ -41,9 +42,6 @@ highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
 highlight SpecialKey ctermbg=NONE guibg=NONE
 highlight EndOfBuffer ctermbg=NONE guibg=NONE
-
-" emoji
-set completefunc=emoji#complete
 
 " display
 set number

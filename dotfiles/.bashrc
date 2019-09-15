@@ -153,14 +153,17 @@ if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
-alias :q=exit
-alias :wq=exit
-alias where=which
+alias :q="exit"
+alias :Q="exit"
+alias lsa="ls -A"
+alias untar="tar -zxvf"
+
 alias vim=nvim
+alias v=nvim
 alias ghci="stack ghci"
+
 alias gcc.oit="gcc -std=c89 -Wall -Wextra"
 alias ssh.oit="ssh e1n18095@o-vnc.center.oit.ac.jp"
-alias untar="tar -zxvf"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/blackbracken/.sdkman"
