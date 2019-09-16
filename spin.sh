@@ -15,5 +15,5 @@ ln -sf $GEAR_ROOT/config/nvim $HOME/.config
 
 for dotfile in $(ls -A $GEAR_ROOT/dotfiles); do
   rm -f $HOME/$dotfile
-  ln -sf $GEAR_ROOT/$dotfile $HOME/$dotfile
+  ln -sf $GEAR_ROOT/$dotfile $HOME
 done
