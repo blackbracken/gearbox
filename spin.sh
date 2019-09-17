@@ -11,9 +11,6 @@ fi
 rm -rf $GEAR_ROOT
 git clone https://github.com/blackbracken/gear.git $GEAR_ROOT
 
-rm -rf $HOME/.config/nvim
-ln -sf $GEAR_ROOT/config/nvim $HOME/.config
-
 for dotfile in $(ls -A $GEAR_ROOT/dotfiles); do
   rm -f $HOME/$dotfile
   ln -sf $GEAR_ROOT/dotfiles/$dotfile $HOME
