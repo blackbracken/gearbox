@@ -1,4 +1,4 @@
-#!/bin/bash -eu
+#!/bin/bash -u
 cd `dirname $0`
 
 readonly GEAR_ROOT="$HOME/.gear"
