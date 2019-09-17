@@ -1,4 +1,5 @@
 #!/bin/bash -eu
+cd `dirname $0`
 
 readonly GEAR_ROOT="$HOME/.gear"
 

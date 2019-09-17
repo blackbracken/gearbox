@@ -1,9 +1,11 @@
 #!/bin/bash
+cd `dirname $0`
 
-if [ -d ~/.sdkman/ ]; then
+if [ -d $HOME/.sdkman/ ]; then
   exit 0
 fi
 
 curl -s "https://get.sdkman.io" | bash
 shopt -s expand_aliases
-source ~/.sdkman/bin/sdkman-init.sh
+
+source $HOME/.sdkman/bin/sdkman-init.sh
