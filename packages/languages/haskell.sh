@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo pacman --needed -S stack
+yes | sudo pacman --needed -S stack
 stack setup --system-ghc
