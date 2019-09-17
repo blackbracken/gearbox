@@ -8,5 +8,8 @@ for language in $(ls ./languages); do
   sh ./languages/$language
 done
 
+sh ./apps.sh
 sh ./input.sh
 sh ./commands.sh
+sh ./neovim.sh
+sh ./powerline.sh
