@@ -4,8 +4,8 @@ cd `dirname $0`
 yes | sudo pacman --needed -S $(pacman -Qg base-devel | cut -f2 -d " ") \
                                 yay
 
-sudo pacman -Syuu
-yay -Syuu
+yes | sudo pacman -Syuu
+yes | yay -Syuu
 
 for language in $(ls ./languages); do
   sh ./languages/$language
