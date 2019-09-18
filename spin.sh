@@ -3,7 +3,7 @@ cd `dirname $0`
 
 readonly GEAR_ROOT="$HOME/.gear"
 
-curl -sL https://raw.githubusercontent.com/blackbracken/.gear/master/gear_art | cat
+curl -sL https://raw.githubusercontent.com/blackbracken/.gear/master/resources/gear_art | cat
 
 if [ "`whoami`" == "root" ]; then
   echo "Gear must be spun without the privilege."
