@@ -1,5 +1,5 @@
 #!/bin/bash
 cd `dirname $0`
 
-yay --needed -S powerline-go
+yes | yay -S powerline-go
 sudo pacman --needed -S powerline-fonts
