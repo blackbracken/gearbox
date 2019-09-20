@@ -162,7 +162,7 @@ alias vim=nvim
 alias v=nvim
 alias ghci="stack ghci"
 
-alias tree="tree -L 3 -I \".git\""
+alias tree="tree -I \".git\""
 
 alias gcc.oit="gcc -std=c89 -Wall -Wextra"
 alias ssh.oit="ssh e1n18095@o-vnc.center.oit.ac.jp"
