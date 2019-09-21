@@ -5,6 +5,7 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'rhysd/vim-color-spring-night'
   Plug 'scrooloose/nerdtree'
   Plug 'itchyny/lightline.vim'
