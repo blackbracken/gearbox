@@ -1,17 +1,1 @@
-call coc#config('languageserver.haskell', {
-\  "command": "hie-wrapper",
-\  "rootPatterns": [
-\    "stack.yaml",
-\    "cabal.config",
-\    "package.yaml"
-\  ],
-\  "filetypes": [
-\    "hs",
-\    "lhs",
-\    "haskell"
-\  ],
-\  "initializationOptions": {
-\    "languageServerHaskell": {
-\    },
-\  },
-\})
+autocmd FileType json syntax match Comment +\/\/.\+$+

@@ -3,7 +3,7 @@ cd `dirname $0`
 
 readonly GEAR_ROOT="$HOME/.gear"
 
-curl -sL https://raw.githubusercontent.com/blackbracken/.gear/master/resources/gear_art | cat
+curl -sL https://raw.githubusercontent.com/blackbracken/.gear/master/res/gear_art | cat
 
 if [ "`whoami`" == "root" ]; then
   echo "Gear must be spun without the privilege."
@@ -22,7 +22,7 @@ done
 
 sh $GEAR_ROOT/packages/install.sh
 
-base64 -d > $HOME/Pictures/wallpaper.jpg < $GEAR_ROOT/resources/wallpaper.b64
+base64 -d > $HOME/Pictures/wallpaper.jpg < $GEAR_ROOT/res/wallpaper.b64
 gsettings set org.gnome.desktop.background picture-uri $HOME/Pictures/wallpaper.jpg
 
 gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
