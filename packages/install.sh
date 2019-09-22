@@ -10,6 +10,5 @@ done
 
 sh ./app.sh
 sh ./japanize.sh
-sh ./commands.sh
 sh ./neovim.sh
 sh ./powerline.sh
