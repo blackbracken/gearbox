@@ -5,7 +5,7 @@ yes | sudo pacman --needed -S yay
 yay -Syu --devel --timeupdate
 
 for lang in $(ls ./lang); do
-  sh ./languages/$lang
+  sh ./lang/$lang
 done
 
 sh ./app.sh
