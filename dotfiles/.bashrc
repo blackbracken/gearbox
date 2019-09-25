@@ -138,20 +138,6 @@ ex ()
   fi
 }
 
-# better yaourt colors
-export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
-
-# remove capslock
-setxkbmap -option ctrl:nocaps
-
-# powerline-go
-function _update_ps1() {
-    PS1="$($GOPATH/bin/powerline-go -modules user,ssh,cwd,git,exit -cwd-mode dironly -error $?)"
-}
-
-if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
 
 alias :q="exit"
 alias :Q="exit"
@@ -167,6 +153,17 @@ alias tree="tree -I \".git\""
 alias gcc.oit="gcc -std=c89 -Wall -Wextra"
 alias ssh.oit="ssh e1n18095@o-vnc.center.oit.ac.jp"
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+# remove capslock
+setxkbmap -option ctrl:nocaps
+
+# powerline-go
+function _update_ps1() {
+    PS1="$($GOPATH/bin/powerline-go -modules user,ssh,cwd,git,exit -cwd-mode dironly -error $?)"
+}
+if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
+
+# sdkman
 export SDKMAN_DIR="/home/blackbracken/.sdkman"
 [[ -s "/home/blackbracken/.sdkman/bin/sdkman-init.sh" ]] && source "/home/blackbracken/.sdkman/bin/sdkman-init.sh"
