@@ -139,6 +139,9 @@ ex ()
 }
 
 
+export GEAR_ROOT="$HOME/.gear"
+export SDKMAN_DIR="$HOME/.sdkman"
+
 alias :q="exit"
 alias :Q="exit"
 alias lsa="ls -A"
@@ -165,5 +168,4 @@ if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
 fi
 
 # sdkman
-export SDKMAN_DIR="/home/blackbracken/.sdkman"
 [[ -s "/home/blackbracken/.sdkman/bin/sdkman-init.sh" ]] && source "/home/blackbracken/.sdkman/bin/sdkman-init.sh"

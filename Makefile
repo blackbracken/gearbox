@@ -19,7 +19,13 @@ update:
 		rm -f $$HOME/$$dotfile; \
 		ln -sf $(DOTFILES_DIR)/$$dotfile $$HOME; \
 	done
+	@source $$HOME/.bashrc
 	@echo "$(PREFIX) Now .gear and symbolics are up to date."
+
+gear:
+	@echo ""
+	@cat ./res/gear_art
+	@echo ""
 
 help:
 	@echo "$(PREFIX) Usage: make [initialize | update | help]"
