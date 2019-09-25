@@ -1,6 +1,7 @@
 #!/bin/bash
 
-yes | sudo pacman --needed -S tree \
+yes | sudo pacman --needed -S imagewriter \
+                              tree \
                               tokei
 
 yay --needed -S jetbrains-toolbox \
