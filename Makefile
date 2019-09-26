@@ -13,7 +13,13 @@ initialize:
 
 update:
 	@git pull origin master
-	@yes | sudo pacman --needed -S yay
+	@if !(type "yay" > /dev/null 2>&1); then \
+	    git clone https://aur.archlinux.org/yay.git; \
+	    cd yay; \
+	    makepkg -si; \
+	    cd ../; \
+	    rm -rf yay; \
+	fi
 	@yay -Syu --devel --timeupdate
 	@for dotfile in $$(ls -A $(DOTFILES_DIR)); do \
 		rm -f $$HOME/$$dotfile; \
