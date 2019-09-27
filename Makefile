@@ -1,15 +1,24 @@
 PREFIX := " [.gear]"
 
 GEAR_ROOT := $$HOME/.gear
-COMMONS_DIR := $(GEAR_ROOT)/init/common
 DOTFILES_DIR := $(GEAR_ROOT)/dotfiles
 
-initialize:
+MINIMAL_DIR := $(GEAR_ROOT)/init/minimal
+ENRICH_DIR := $(GEAR_ROOT)/init/enrich
+
+minimal:
 	@make update
-	@for common in $$(ls $(COMMONS_DIR)); do \
-		sh "$(COMMONS_DIR)/$$common"; \
+	@for minimal in $$(ls $(MINIMAL_DIR)); do \
+		sh "$(MINIMAL_DIR)/$$minimal"; \
 	done
-	@echo "$(PREFIX) All common packages are installed."
+	@echo "$(PREFIX) All minimal packages have been installed."
+
+enrich:
+	@make minimal
+	@for enrich in $$(ls $(ENRICH_DIR)); do \
+		sh "$(ENRICH_DIR)/$$enrich"; \
+	done
+	@echo "$(PREFIX) All enrich packages have been installed."
 
 update:
 	@git pull origin master
@@ -20,13 +29,12 @@ update:
 	    cd ../; \
 	    rm -rf yay; \
 	fi
-	@yay -Syu --devel --timeupdate
+	@yay -Syu --devel
 	@for dotfile in $$(ls -A $(DOTFILES_DIR)); do \
-		rm -f $$HOME/$$dotfile; \
+		rm -rf $$HOME/$$dotfile; \
 		ln -sf $(DOTFILES_DIR)/$$dotfile $$HOME; \
 	done
-	@source $$HOME/.bashrc
-	@echo "$(PREFIX) Now .gear and symbolics are up to date."
+	@echo "$(PREFIX) Now .gear and symbolics for dotfiles are up to date."
 
 gear:
 	@echo ""
@@ -34,4 +42,4 @@ gear:
 	@echo ""
 
 help:
-	@echo "$(PREFIX) Usage: make [initialize | update | help]"
+	@echo "$(PREFIX) Usage: make [minimal | enrich | update | gear | help]"
