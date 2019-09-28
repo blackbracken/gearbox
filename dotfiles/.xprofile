@@ -1,5 +1,4 @@
 export XDG_CONFIG_HOME="$HOME/.config"
-
 export XMODIFIERS="@im=fcitx"
 export XMODIFIER="@im=fcitx"
 export GTK_IM_MODULE=fcitx
