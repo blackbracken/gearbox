@@ -99,12 +99,6 @@
   </dock>
   <keyboard>
     <chainQuitKey>A-Up</chainQuitKey>
-    <keybind key="C-Page_Up">
-      <action name="DesktopPrevious"/>
-    </keybind>
-    <keybind key="C-Page_Down">
-      <action name="DesktopNext"/>
-    </keybind>
     <keybind key="W-Page_Up">
       <action name="DesktopPrevious"/>
     </keybind>
