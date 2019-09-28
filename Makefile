@@ -1,40 +1,28 @@
-PREFIX := " [.gear]"
+prefix := " [gearbox]"
 
-GEAR_ROOT := $$HOME/.gear
-DOTFILES_DIR := $(GEAR_ROOT)/dotfiles
-
-MINIMAL_DIR := $(GEAR_ROOT)/init/minimal
-ENRICH_DIR := $(GEAR_ROOT)/init/enrich
+gearbox_dir = $$HOME/.gearbox
+common_dir = $(gearbox_dir)/init/pkg/common
+dotfiles_dir = $(gearbox_dir)/dotfiles
 
 minimal:
-	@make update
-	@for minimal in $$(ls $(MINIMAL_DIR)); do \
-		sh "$(MINIMAL_DIR)/$$minimal"; \
-	done
-	@echo "$(PREFIX) All minimal packages have been installed."
-
-enrich:
-	@make minimal
-	@for enrich in $$(ls $(ENRICH_DIR)); do \
-		sh "$(ENRICH_DIR)/$$enrich"; \
-	done
-	@echo "$(PREFIX) All enrich packages have been installed."
+	@sh $(gearbox_dir)/init/minimal.sh
 
 update:
+	@make minimal
 	@git pull origin master
-	@if !(type "yay" > /dev/null 2>&1); then \
-	    git clone https://aur.archlinux.org/yay.git; \
-	    cd yay; \
-	    makepkg -si; \
-	    cd ../; \
-	    rm -rf yay; \
-	fi
 	@yay -Syu --devel
-	@for dotfile in $$(ls -A $(DOTFILES_DIR)); do \
+	@for dotfile in $$(ls -A $(dotfiles_dir)); do \
 		rm -rf $$HOME/$$dotfile; \
-		ln -sf $(DOTFILES_DIR)/$$dotfile $$HOME; \
+		ln -sf $(dotfiles_dir)/$$dotfile $$HOME; \
 	done
-	@echo "$(PREFIX) Now .gear and symbolics for dotfiles are up to date."
+	@echo "$(prefix) Now gearbox are up to date."
+
+common:
+	@make update
+	@for common in $$(ls $(common_dir)); do \
+		sh "$(common_dir)/$$common"; \
+	done
+	@echo "$(prefix) All common packages have been installed."
 
 gear:
 	@echo ""
@@ -42,4 +30,4 @@ gear:
 	@echo ""
 
 help:
-	@echo "$(PREFIX) Usage: make [minimal | enrich | update | gear | help]"
+	@echo "$(prefix) Usage: make [common | update | help | gear | minimal]"

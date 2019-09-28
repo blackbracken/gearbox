@@ -15,8 +15,5 @@ gnome-keyring-daemon --start --components=pkcs11 &
 
 nitrogen --restore &
 
-ksuperkey -e 'Super_L=Alt_L|F1' &
-ksuperkey -e 'Super_R=Alt_L|F1' &
-
 xset dpms 600 900 1200
 xset r rate 350 60
