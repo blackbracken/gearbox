@@ -34,9 +34,9 @@ alias ssh.oit="ssh e1n18095@o-vnc.center.oit.ac.jp"
 
 # powerline-rs
 prompt() {
-  PS1="$(powerline-rs --module ssh,root,cwd,git,gitstage --cwd-max-depth 2 --shell bash $?)"
+  PS1="$(powerline-rs --modules ssh,root,cwd,git,gitstage --cwd-max-depth 2 --shell zsh $?)"
 }
-PROMPT_COMMAND=prompt
+precmd_functions+=(prompt)
 
 # sdkman
 [[ -s "/home/blackbracken/.sdkman/bin/sdkman-init.sh" ]] && source "/home/blackbracken/.sdkman/bin/sdkman-init.sh"

@@ -15,6 +15,8 @@ update:
 		rm -rf $$HOME/$$dotfile; \
 		ln -sf $(dotfiles_dir)/$$dotfile $$HOME; \
 	done
+	@rm -rf $$HOME/.config/openbox
+	@ln -sf $(gearbox_dir)/config/openbox $$HOME/.config
 	@echo "$(prefix) Now gearbox are up to date."
 
 common:
