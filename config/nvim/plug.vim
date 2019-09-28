@@ -10,7 +10,5 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdtree'
   Plug 'itchyny/lightline.vim'
   Plug 'Yggdroot/indentLine'
-  Plug 'udalov/kotlin-vim', {'for':['kotlin']}
-  Plug 'elzr/vim-json', {'for':['json']}
   Plug 'airblade/vim-gitgutter'
 call plug#end()
