@@ -1,3 +1,5 @@
+# gearbox
+
 ```
           .,  dh  ..
        ,..MMNdMMNdMM-..J
@@ -14,7 +16,7 @@ dMMF{  `  ?MMMMMMMM<     (dMMb
           "^  M#  ?B   .MM#(    .dMMMMMMb     +MM@
                          .M(     ?MMMMM#:    .(N,
                         JHMb<      ??7!      iMMH'
-         [ .gear ]        .MN/..           .uMN.
+         [ gearbox ]      .MN/..           .uMN.
                              M9=MNmg++ggMF?W@
                                    .M@.
 ```
