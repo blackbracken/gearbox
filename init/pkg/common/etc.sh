@@ -1,15 +1,11 @@
 #!/bin/bash
 
-yes | sudo pacman --needed -S powerline-fonts \
-                              adobe-source-han-sans-otc-fonts \
-                              nm-connection-editor \
-                              noto-fonts-emoji \
+yes | sudo pacman --needed -S nm-connection-editor \
                               gnome-multi-writer \
                               exa \
                               tokei
 
-yay -S powerline-rs \
-       gedit \
+yay -S gedit \
        jetbrains-toolbox \
        discord \
        slack-desktop
