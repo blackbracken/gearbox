@@ -8,4 +8,5 @@ yes | sudo pacman --needed -S nm-connection-editor \
 yay -S gedit \
        jetbrains-toolbox \
        discord \
-       slack-desktop
+       slack-desktop \
+       libmnt

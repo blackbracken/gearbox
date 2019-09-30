@@ -6,7 +6,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'rhysd/vim-color-spring-night'
+  Plug 'cocopon/iceberg.vim'
   Plug 'scrooloose/nerdtree'
   Plug 'itchyny/lightline.vim'
   Plug 'Yggdroot/indentLine'
