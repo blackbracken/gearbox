@@ -1,7 +1,6 @@
 #!/bin/bash
 
-yes | sudo pacman --needed -S nm-connection-editor \
-                              gnome-multi-writer \
+yes | sudo pacman --needed -S gnome-multi-writer \
                               exa \
                               tokei
 

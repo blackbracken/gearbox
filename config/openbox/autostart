@@ -18,7 +18,8 @@ al-polybar-session &
 
 # start conky
 # al-conky-session --autostart &
-#
+
+nm-applet
 
 xmodmap ~/.Xmodmap
 fcitx-autostart
