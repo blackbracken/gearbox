@@ -1,7 +1,7 @@
 #!/bin/bash
 
 yes | sudo pacman --needed -S gnome-multi-writer \
-                              exa \
+                              lsd \
                               tokei
 
 yay -S gedit \

@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+export PATH="$PATH:$HOME/.cargo/bin"
+
 [[ $- == *i* && $ZSH_VERSION ]] && SHELL=/usr/bin/zsh || return 0
 
 autoload -Uz colors; colors
@@ -28,9 +30,11 @@ alias :q="exit"
 alias :Q="exit"
 alias untar="tar -zxvf"
 alias vim="nvim"
-alias ls="exa"
-alias lsa="exa -a"
-alias tree="exa -T -I \".git\""
+
+alias ls="lsd --long --blocks permission,size,name"
+alias lsa="lsd --long --almost-all"
+alias tree="lsd --tree"
+
 alias ghci="stack ghci"
 
 alias gcc.oit="gcc -std=c89 -Wall -Wextra"
@@ -40,7 +44,7 @@ alias ssh.oit="ssh e1n18095@o-vnc.center.oit.ac.jp"
 prompt() {
   PS1="$(powerline-rs --modules ssh,root,cwd,git,gitstage --cwd-max-depth 2 --shell zsh $?)"
 }
-if type "yay" > /dev/null 2>&1; then precmd_functions+=(prompt); fi
+if type "powerline-rs" > /dev/null 2>&1; then precmd_functions+=(prompt); fi
 
 # sdkman
 [[ -s "/home/blackbracken/.sdkman/bin/sdkman-init.sh" ]] && source "/home/blackbracken/.sdkman/bin/sdkman-init.sh"
