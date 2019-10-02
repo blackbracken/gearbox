@@ -29,16 +29,20 @@ bindkey "^[^[[D" backward-word
 alias :q="exit"
 alias :Q="exit"
 alias untar="tar -zxvf"
-alias vim="nvim"
-
-alias ls="lsd --long --blocks permission,size,name"
-alias lsa="lsd --long --almost-all"
-alias tree="lsd --tree"
-
-alias ghci="stack ghci"
 
 alias gcc.oit="gcc -std=c89 -Wall -Wextra"
 alias ssh.oit="ssh e1n18095@o-vnc.center.oit.ac.jp"
+
+# etc
+alias vim="nvim"
+alias ghci="stack ghci"
+
+# lsd
+if type "lsd" > /dev/null 2>&1; then
+  alias ls="lsd --long --blocks permission,size,name"
+  alias lsa="lsd --long --almost-all"
+  alias tree="lsd --tree"
+fi
 
 # powerline-rs
 prompt() {

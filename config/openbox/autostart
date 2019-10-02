@@ -19,7 +19,6 @@ al-polybar-session &
 # start conky
 # al-conky-session --autostart &
 
+compton --backend xrender
 nm-applet
-
 xmodmap ~/.Xmodmap
-fcitx-autostart

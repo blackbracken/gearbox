@@ -1,6 +1,7 @@
 #!/bin/bash
 
 yes | sudo pacman --needed -S gnome-multi-writer \
+                              gnome-screenshot \
                               lsd \
                               tokei
 
