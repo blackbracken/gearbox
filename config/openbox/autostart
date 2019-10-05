@@ -1,5 +1,5 @@
 # compton
-al-compositor --start &
+# al-compositor --start &
 
 # enable numlock, commented out for laptop users
 # numlockx &
@@ -19,6 +19,7 @@ al-polybar-session &
 # start conky
 # al-conky-session --autostart &
 
-compton --backend xrender
-nm-applet
-xmodmap ~/.Xmodmap
+nm-applet &
+compton -b --config ~/.config/compton/compton.conf &
+xmodmap ~/.Xmodmap &
+fcitx-autostart &
