@@ -10,4 +10,5 @@ yay -S gedit \
        jetbrains-toolbox \
        discord \
        slack-desktop \
-       libmnt
+       libmnt \
+       ntpdate
