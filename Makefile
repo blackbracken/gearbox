@@ -10,6 +10,7 @@ minimal:
 update:
 	@make minimal
 	@git pull origin master
+	@sudo pacman --needed -S base
 	@yay -Syu --devel
 	@for dotfile in $$(ls -A $(dotfiles_dir)); do \
 		rm -rf $$HOME/$$dotfile; \
