@@ -10,5 +10,6 @@ yay -S gedit \
        jetbrains-toolbox \
        discord \
        slack-desktop \
+       spotify \
        libmnt \
        ntpdate

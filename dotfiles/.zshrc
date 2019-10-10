@@ -30,18 +30,17 @@ alias :q="exit"
 alias :Q="exit"
 alias untar="tar -zxvf"
 
-alias gcc.oit="gcc -std=c89 -Wall -Wextra"
-alias ssh.oit="ssh e1n18095@o-vnc.center.oit.ac.jp"
+alias yayi="yay -S"
+alias yayl="yay -Sl | grep \"Installed\" | grep"
+alias yays="yay --sortby votes -Ss"
 
-# etc
 alias gear="cd ~/.gearbox"
 alias vim="nvim"
 alias ghci="stack ghci"
+alias akashi="sudo ntpdate -b ntp.nict.jp && sudo timedatectl set-ntp true"
 
-# ntpdate
-if type "ntpdate" > /dev/null 2>&1; then
-  alias akashi="sudo ntpdate -b ntp.nict.jp && sudo timedatectl set-ntp true"
-fi
+alias gcc.oit="gcc -std=c89 -Wall -Wextra"
+alias ssh.oit="ssh e1n18095@o-vnc.center.oit.ac.jp"
 
 # lsd
 if type "lsd" > /dev/null 2>&1; then
