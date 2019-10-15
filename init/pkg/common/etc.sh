@@ -6,10 +6,11 @@ yes | sudo pacman --needed -S gnome-multi-writer \
                               bat \
                               tokei
 
-yay -S gedit \
+yay -S vivaldi \
        jetbrains-toolbox \
        discord \
        slack-desktop \
        spotify \
        libmnt \
+       gedit \
        ntpdate
