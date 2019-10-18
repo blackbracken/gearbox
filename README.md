@@ -25,4 +25,4 @@ dMMF{  `  ?MMMMMMMM<     (dMMb
 
 Run the following command on your terminal (do **NOT** clone this repository to use).
 
-`curl -sL https://bracken.black/.gear | sh`
+`curl -sL https://bracken.black/gearbox | sh`
