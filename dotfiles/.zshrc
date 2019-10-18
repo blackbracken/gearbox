@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 export PATH="$PATH:$HOME/.cargo/bin"
+export GPG_TTY=$(tty)
 
 [[ $- == *i* && $ZSH_VERSION ]] && SHELL=/usr/bin/zsh || return 0
 
