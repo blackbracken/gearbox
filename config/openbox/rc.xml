@@ -282,6 +282,11 @@
     <keybind key="A-Tab">
       <action name="NextWindow"/>
     </keybind>
+    <keybind key="W-e">
+      <action name="Execute">
+        <command>thunar</command>
+      </action>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>4</dragThreshold>
