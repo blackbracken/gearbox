@@ -42,6 +42,7 @@ alias ghci='stack ghci'
 alias akashi='sudo ntpdate -b ntp.nict.jp && sudo timedatectl set-ntp true'
 
 alias gcc.oit='gcc -std=c89 -Wall -Wextra'
+alias vpn.oit='sudo openfortivpn vpn2.oit.ac.jp:443 --username e1n18095'
 alias ssh.oit='ssh e1n18095@o-vnc.center.oit.ac.jp'
 
 # lsd
