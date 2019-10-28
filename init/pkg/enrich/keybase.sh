@@ -1,7 +1,8 @@
 #!/bin/bash
 
-sudo pacman --needed -S keybase
+sudo pacman --needed -S gpgme keybase
 
+keybase login
 keybase pgp export | gpg --import
 keybase pgp export --secret | gpg --allow-secret-key --import
 
