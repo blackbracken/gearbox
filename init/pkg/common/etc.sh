@@ -6,14 +6,13 @@ yes | sudo pacman --needed -S gnome-multi-writer \
                               openfortivpn \
                               lsd \
                               bat \
-                              tokei \
-                              grex
+                              tokei
 
 yay -S vivaldi \
        jetbrains-toolbox \
        discord \
        slack-desktop \
        spotify \
-       libmnt \
+       libmtp \
        gedit \
        ntpdate
