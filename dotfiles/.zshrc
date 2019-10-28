@@ -59,4 +59,6 @@ prompt() {
 if type "powerline-rs" > /dev/null 2>&1; then precmd_functions+=(prompt); fi
 
 # sdkman
-[[ -s "/home/blackbracken/.sdkman/bin/sdkman-init.sh" ]] && source "/home/blackbracken/.sdkman/bin/sdkman-init.sh"
+if [ -s "/home/blackbracken/.sdkman/bin/sdkman-init.sh" ]; then
+  source "/home/blackbracken/.sdkman/bin/sdkman-init.sh"
+fi
