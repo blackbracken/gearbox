@@ -45,8 +45,15 @@ alias gcc.oit='gcc -std=c89 -Wall -Wextra'
 alias vpn.oit='sudo openfortivpn vpn2.oit.ac.jp:443 --username e1n18095'
 alias ssh.oit='ssh e1n18095@o-vnc.center.oit.ac.jp'
 
+alias topd='cd $(git rev-parse --show-toplevel)'
+
 # lsd
-if type 'lsd' > /dev/null 2>&1; then
+if type 'lsd' > /dev/null 2>&1; then  
+  cdls() {
+    \cd "$@" && lsd
+  }
+
+  alias cd='cdls'
   alias ls='lsd --long --blocks permission,size,name'
   alias lsa='lsd --long --almost-all'
   alias tree='lsd --tree'

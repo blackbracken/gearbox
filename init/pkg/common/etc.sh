@@ -13,6 +13,7 @@ yay -S vivaldi \
        discord \
        slack-desktop \
        spotify \
+       onedrive \
        libmtp \
        gedit \
        ntpdate
