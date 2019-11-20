@@ -8,12 +8,11 @@ yes | sudo pacman --needed -S gnome-multi-writer \
                               bat \
                               tokei
 
-yay -S vivaldi \
+yay -S firefox \
        jetbrains-toolbox \
        discord \
        slack-desktop \
        spotify \
-       onedrive \
        libmtp \
        gedit \
-       ntpdate
+       thunar

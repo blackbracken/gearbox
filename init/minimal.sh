@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman --needed -S curl git
+sudo pacman --needed -S curl git go
 
 git config --global user.name BlackBracken
 git config --global user.email me@bracken.black
