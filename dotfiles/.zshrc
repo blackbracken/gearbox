@@ -29,6 +29,7 @@ bindkey "^[^[[D" backward-word
 
 alias :q='exit'
 alias :Q='exit'
+alias topd='cd $(git rev-parse --show-toplevel)'
 alias untar='tar -zxvf'
 alias plz='sudo $(fc -ln -1)'
 
@@ -36,16 +37,14 @@ alias yayi='yay -S'
 alias yayl="yay -Sl | grep \'Installed\' | grep"
 alias yays='yay --sortby votes -Ss'
 
+alias akashi='sudo ntpdate -b ntp.nict.jp && sudo timedatectl set-ntp true'
 alias gear='cd ~/.gearbox'
 alias vim='nvim'
 alias ghci='stack ghci'
-alias akashi='sudo ntpdate -b ntp.nict.jp && sudo timedatectl set-ntp true'
 
 alias gcc.oit='gcc -std=c89 -Wall -Wextra'
 alias vpn.oit='sudo openfortivpn vpn2.oit.ac.jp:443 --username e1n18095'
 alias ssh.oit='ssh e1n18095@o-vnc.center.oit.ac.jp'
-
-alias topd='cd $(git rev-parse --show-toplevel)'
 
 # lsd
 if type 'lsd' > /dev/null 2>&1; then  

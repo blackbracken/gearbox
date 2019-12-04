@@ -13,6 +13,7 @@ yay -S firefox \
        discord \
        slack-desktop \
        spotify \
+       android-sdk-platform-tools \ 
        libmtp \
        gedit \
        thunar
