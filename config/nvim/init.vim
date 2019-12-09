@@ -44,6 +44,10 @@ set shiftwidth=4
 set expandtab
 set smarttab
 
+" formatting extension
+autocmd BufNewFile,BufRead Makefile runtime! filetype/makefile.vim
+autocmd Filetype           sh       runtime! filetype/shell.vim
+
 " encode
 set encoding=utf-8
 set fileencoding=utf-8
@@ -54,5 +58,3 @@ set mouse=a
 
 " key binds
 nnoremap <silent><A-1> :NERDTreeToggle<CR>
-
-autocmd BufNewFile,BufRead Makefile runtime! filetype/makefile.vim
