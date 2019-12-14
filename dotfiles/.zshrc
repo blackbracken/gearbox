@@ -34,7 +34,7 @@ alias untar='tar -zxvf'
 alias plz='sudo $(fc -ln -1)'
 
 alias yayi='yay -S'
-alias yayl="yay -Sl | grep \'Installed\' | grep"
+alias yayl="yay -Qe | grep"
 alias yays='yay --sortby votes -Ss'
 
 alias akashi='sudo ntpdate -b ntp.nict.jp && sudo timedatectl set-ntp true'
