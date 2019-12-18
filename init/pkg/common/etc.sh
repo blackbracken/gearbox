@@ -8,8 +8,7 @@ yes | sudo pacman --needed -S gnome-multi-writer \
                               bat \
                               tokei
 
-yay -S nerd-fonts-complete \
-       firefox \
+yay -S firefox \
        jetbrains-toolbox \
        discord \
        slack-desktop \
