@@ -69,7 +69,3 @@ if [ -s "/home/blackbracken/.sdkman/bin/sdkman-init.sh" ]; then
   source "/home/blackbracken/.sdkman/bin/sdkman-init.sh"
 fi
 
-# tmux
-if type "tmux" > /dev/null 2>&1; then
-  if [[ ! -n $TMUX ]]; then tmux attach > /dev/null && exit; fi
-fi
