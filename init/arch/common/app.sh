@@ -2,7 +2,6 @@
 
 yay --needed -S firefox \
                 jetbrains-toolbox \
-                #spotify \
                 slack-desktop \
                 discord \
                 thunar \
@@ -10,3 +9,4 @@ yay --needed -S firefox \
                 gnome-multi-writer \
                 gnome-screenshot \
                 gedit
+# disabled: spotify
