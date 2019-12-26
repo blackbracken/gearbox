@@ -4,6 +4,7 @@ TARGET := arch
 
 initialize:
 	$(eval init_path := "$(gearbox_dir)/init/$(TARGET)/init.sh")
+	@mkdir -p $(HOME)/.config
 	@if [[ ! -f $(init_path) ]]; then \
 		echo "TARGET($(TARGET)) not found"; \
 		exit 1; \
