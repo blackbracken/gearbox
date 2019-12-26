@@ -2,6 +2,7 @@
 
 yay --needed -S xorg-server \
                 xorg-xinit \
+                xorg-xset \
                 openbox \
                 lightdm \
                 lightdm-mini-greeter
