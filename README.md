@@ -4,7 +4,7 @@
 
 |target|command|
 |:-:|:-:|
-| arch | `curl -sL https://bracken.black/gearbox/arch.sh | sh` |
+| arch | `bash -c "$(curl -sL bracken.black/gearbox/arch.sh)"` |
 
 ### Cound't connect to the interact?
 Execute `sudo systemctl enable dhcpcd`.
