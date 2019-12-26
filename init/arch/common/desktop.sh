@@ -19,4 +19,4 @@ sudo sed -i -e "/^window-color = /c\window-color = \"#1B51B5\"" /etc/lightdm/lig
 rm -rf $HOME/.config/openbox
 ln -sf $HOME/gearbox/config/openbox $HOME/.config/openbox
 
-#sudo systemctl enable lightdm
+sudo systemctl enable lightdm
