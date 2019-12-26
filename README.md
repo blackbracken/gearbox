@@ -1,7 +1,10 @@
 # gearbox
 
 ## Install
-`(not implemented yet)`
 
-### Cound't connect interact?
+|target|command|
+|:-:|:-:|
+|arch|`curl -sL https://bracken.black/gearbox/arch.sh | sh`|
+
+### Cound't connect to the interact?
 Execute `sudo systemctl enable dhcpcd`.
