@@ -1,8 +1,10 @@
 #!/bin/bash
 
-yay --needed -S fcitx \
-                fcitx-{gtk2,gtk3,qt5,mozc,configtool} \
-                adobe-source-han-sans-otc-fonts \
+yay --needed -S scim \
+                scim-anthy \
+                otf-ipafont \
                 noto-fonts-emoji
 
-fcitx &
+sed -i -e "/^\/Panel\/Gtk\/ToolBar\/AlwaysHidden/c\/Panel\/Gtk\/ToolBar\/AlwaysHidden = true" ~/.scim/config
+
+scim -d &

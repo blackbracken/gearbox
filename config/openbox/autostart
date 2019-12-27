@@ -1,3 +1,4 @@
-xset r rate 260 32
+blueberry-tray &
+scim -d &
 
-fcitx &
+xset r rate 260 32
