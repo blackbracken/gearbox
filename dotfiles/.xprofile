@@ -1,6 +1,6 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 
-export XMODIFIERS="@im=SCIM"
-export GTK_IM_MODULE=scim
-export QT_IM_MODULE=scim
-export DefaultIMModule=scim
+export XMODIFIERS="@im=fcitx"
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export DefaultIMModule=fcitx
