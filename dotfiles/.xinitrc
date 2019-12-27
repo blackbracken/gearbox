@@ -11,4 +11,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+xset r rate 260 32
+
 exec openbox-session
