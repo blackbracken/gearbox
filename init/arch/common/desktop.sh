@@ -7,6 +7,7 @@ yay --needed -S xorg-server \
                 xcape \
                 lightdm \
                 lightdm-webkit2-greeter \
+                light-locker \
                 rofi
 
 # settings for openbox

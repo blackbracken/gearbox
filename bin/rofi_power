@@ -1,0 +1,22 @@
+#!/bin/bash
+
+readonly SUSPEND="🔒 Lock"
+readonly SHUTDOWN="✂ Shutdown"
+readonly REBOOT="⚖ Reboot"
+
+readonly ITEMS="$SUSPEND\n$SHUTDOWN\n$REBOOT"
+readonly COMMAND="rofi -width 20 -dmenu -i -p power"
+
+option=`echo -e $ITEMS | $COMMAND | tr -d '\r\n'`
+if [ ${#option} -gt 0 ]; then
+  case $option in
+    "$SUSPEND" )
+      light-locker-command -l ;;
+    "$SHUTDOWN" )
+      systemctl poweroff ;;
+    "$REBOOT" )
+      reboot ;;
+    *)
+      ;;
+  esac
+fi

@@ -1,4 +1,5 @@
 xcape -e 'Super_L=Super_L|0'
 
 blueberry-tray &
+light-locker &
 fcitx &

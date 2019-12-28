@@ -192,10 +192,15 @@
 <keyboard>
   <chainQuitKey>C-g</chainQuitKey>
 
-
+  <!-- Keybindings for rofi -->
   <keybind key="W-0">
     <action name="Execute">
       <command>rofi_launcher</command> 
+    </action>
+  </keybind>
+  <keybind key="W-l">
+    <action name="Execute">
+      <command>rofi_power</command> 
     </action>
   </keybind>
 
