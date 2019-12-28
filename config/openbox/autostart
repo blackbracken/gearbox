@@ -4,7 +4,10 @@ light-locker &
 fcitx &
 picom -b
 
-feh --randomize --bg-fill ~/gearbox/res/wallpaper/*
+tint2 &
+
+feh --randomize --bg-fill ~/gearbox/res/wallpaper/*.png
 
 blueberry-tray &
 nm-applet &
+volumeicon &

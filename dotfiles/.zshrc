@@ -43,7 +43,7 @@ alias vim='nvim'
 alias ghci='stack ghci'
 
 alias gcc.oit='gcc -std=c89 -Wall -Wextra'
-alias vpn.oit='sudo openfortivpn vpn2.oit.ac.jp:443 --username e1n18095'
+alias vpn.oit='sudo openfortivpn vpn2.oit.ac.jp:443 --username e1n18095 -p'
 alias ssh.oit='ssh e1n18095@o-vnc.center.oit.ac.jp'
 
 # lsd
