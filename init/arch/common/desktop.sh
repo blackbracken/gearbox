@@ -6,6 +6,7 @@ yay --needed -S xorg-server \
                 openbox \
                 xcape \
                 picom \
+                feh \
                 lightdm \
                 lightdm-webkit2-greeter \
                 light-locker \
