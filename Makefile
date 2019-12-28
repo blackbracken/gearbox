@@ -10,8 +10,14 @@ initialize:
 		exit 1; \
 	fi
 	@sh $(init_path)
+	@make wallpaper
 	@make executable
 	@make symbolic
+
+wallpaper:
+	@for b64wallpaper in $$(find ./res/wallpaper/ -name "*.b64" -type f); do \
+		base64 -d < $$b64wallpaper > "`dirname $$b64wallpaper`/`basename $$b64wallpaper .b64`.png"; \
+	done
 
 executable:
 	@for binfile in $$(ls -A ./bin); do \
