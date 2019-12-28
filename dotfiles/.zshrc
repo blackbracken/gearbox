@@ -68,3 +68,5 @@ if type "powerline-rs" > /dev/null 2>&1; then precmd_functions+=(prompt); fi
 if [ -s "/home/blackbracken/.sdkman/bin/sdkman-init.sh" ]; then
   source "/home/blackbracken/.sdkman/bin/sdkman-init.sh"
 fi
+
+xset r rate 260 32
