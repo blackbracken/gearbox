@@ -3,5 +3,8 @@ xcape -t 300 -e 'Super_L=Super_L|0'
 light-locker &
 fcitx &
 picom -b
+
 feh --randomize --bg-fill ~/gearbox/res/wallpaper/*
+
 blueberry-tray &
+nm-applet &
