@@ -4,14 +4,20 @@ yay --needed -S xorg-server \
                 xorg-xinit \
                 xorg-xset \
                 openbox \
+                xcape \
                 lightdm \
-                lightdm-webkit2-greeter
+                lightdm-webkit2-greeter \
+                rofi
+
+# settings for openbox
+rm -rf $HOME/.config/openbox
+ln -sf $HOME/gearbox/config/openbox $HOME/.config/openbox
 
 # settings for lightdm
 sudo sed -i -e "/greeter-session=/c\greeter-session=lightdm-webkit2-greeter" /etc/lightdm/lightdm.conf
 sudo sed -i -e "/user-session=/c\user-session=openbox" /etc/lightdm/lightdm.conf
-
-rm -rf $HOME/.config/openbox
-ln -sf $HOME/gearbox/config/openbox $HOME/.config/openbox
-
 sudo systemctl enable lightdm
+
+# settings for rofi
+rm -rf $HOME/.config/rofi
+ln -sf $HOME/gearbox/config/rofi $HOME/.config/rofi

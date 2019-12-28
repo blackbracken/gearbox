@@ -1,3 +1,5 @@
+export PATH="$PATH:$HOME/gearbox/bin"
+
 export XDG_CONFIG_HOME="$HOME/.config"
 
 export XMODIFIERS="@im=fcitx"

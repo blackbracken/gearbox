@@ -1,4 +1,4 @@
+xcape -e 'Super_L=Super_L|0'
+
 blueberry-tray &
 fcitx &
-
-xset r rate 260 32

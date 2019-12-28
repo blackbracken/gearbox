@@ -1,0 +1,6 @@
+rofi.sidebar-mode: false
+rofi.hide-scrollbar: true
+rofi.kb-cancel: Escape,Control+bracketleft
+rofi.kb-mode-previous: Alt+u
+rofi.kb-mode-next: Alt+i
+rofi.theme: ~/gearbox/res/flat-orange.rasi

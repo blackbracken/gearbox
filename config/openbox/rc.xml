@@ -192,6 +192,13 @@
 <keyboard>
   <chainQuitKey>C-g</chainQuitKey>
 
+
+  <keybind key="W-0">
+    <action name="Execute">
+      <command>rofi_launcher</command> 
+    </action>
+  </keybind>
+
   <!-- Keybindings for desktop switching -->
   <keybind key="C-A-Left">
     <action name="GoToDesktop"><to>left</to><wrap>no</wrap></action>

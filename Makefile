@@ -10,7 +10,14 @@ initialize:
 		exit 1; \
 	fi
 	@sh $(init_path)
+	@make executable
 	@make symbolic
+
+executable:
+	@for binfile in $$(ls -A ./bin); do \
+		chmod +x $(gearbox_dir)/bin/$$binfile; \
+		echo "Give a permission to execute: $$binfile"; \
+	done
 
 symbolic:
 	@for dotfile in $$(ls -A ./dotfiles); do \
