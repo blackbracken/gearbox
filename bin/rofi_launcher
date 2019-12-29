@@ -1,0 +1,11 @@
+#!/bin/bash
+
+rofi -show drun \
+     -modi drun \
+     -lines 8 \
+     -columns 1 \
+     -width 20 \
+     -disable-history \
+     -hide-scrollbar \
+     -show-icons \
+     -matching fuzzy

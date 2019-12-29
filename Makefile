@@ -1,34 +1,33 @@
-prefix := " [gearbox]"
+gearbox_dir := $(HOME)/gearbox
 
-gearbox_dir = $$HOME/.gearbox
-common_dir = $(gearbox_dir)/init/pkg/common
-dotfiles_dir = $(gearbox_dir)/dotfiles
+TARGET := arch
 
-minimal:
-	@sh $(gearbox_dir)/init/minimal.sh
+initialize:
+	$(eval init_path := "$(gearbox_dir)/init/$(TARGET)/init.sh")
+	@mkdir -p $(HOME)/.config
+	@if [[ ! -f $(init_path) ]]; then \
+		echo "TARGET($(TARGET)) not found"; \
+		exit 1; \
+	fi
+	@sh $(init_path)
+	@make wallpaper
+	@make executable
+	@make symbolic
 
-update:
-	@make minimal
-	@git pull origin master
-	@sudo pacman --needed -S base
-	@yay -Syu --devel
-	@for dotfile in $$(ls -A $(dotfiles_dir)); do \
-		rm -rf $$HOME/$$dotfile; \
-		ln -sf $(dotfiles_dir)/$$dotfile $$HOME; \
+wallpaper:
+	@for b64wallpaper in $$(find ./res/wallpaper/ -name "*.b64" -type f); do \
+		base64 -d < $$b64wallpaper > "`dirname $$b64wallpaper`/`basename $$b64wallpaper .b64`.png"; \
 	done
-	@echo "$(prefix) Now gearbox are up to date."
 
-common:
-	@make update
-	@for common in $$(ls $(common_dir)); do \
-		sh "$(common_dir)/$$common"; \
+executable:
+	@for binfile in $$(ls -A ./bin); do \
+		chmod +x $(gearbox_dir)/bin/$$binfile; \
+		echo "Give a permission to execute: $$binfile"; \
 	done
-	@echo "$(prefix) All common packages have been installed."
 
-gear:
-	@echo ""
-	@cat ./res/gear_art
-	@echo ""
-
-help:
-	@echo "$(prefix) Usage: make [common | update | help | gear | minimal]"
+symbolic:
+	@for dotfile in $$(ls -A ./dotfiles); do \
+		rm -f $(HOME)/$$dotfile; \
+		ln -sf $(gearbox_dir)/dotfiles/$$dotfile $(HOME); \
+		echo "Set symbolic: $$dotfile";\
+	done

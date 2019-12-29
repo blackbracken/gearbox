@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "OpenSans";
+    font-style: normal;
+    font-weight: 400;
+    src: url(OpenSans-Regular.ttf);
+}
+
+* {
+    font-family: "OpenSans";
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: #000000;
+    color: #ffffff;
+}
+
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+#opts {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#cmd {
+    float:right;
+}
+
+a:visited, a:link {
+    color: white;
+}
+
+a:hover {
+    color: black;
+    background: white;
+}
+
+#pass {
+    font-size: 3em;
+    text-align: center;
+    background: black;
+    color: white;
+    border: none;
+    border-bottom: 3px solid white;
+}
+
+#sessions {
+    background: black;
+    color: white;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#sessions:hover{
+    color: black;
+    background: white;
+}
+
+input:focus{
+    outline: none;
+}
+
+#message {
+    color: red;
+    font-size: 1.5em
+}

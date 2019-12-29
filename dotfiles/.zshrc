@@ -8,7 +8,7 @@ export GPG_TTY=$(tty)
 autoload -Uz colors; colors
 autoload -Uz compinit; compinit
 
-HISTFILE=~/.zsh_history
+HISTFILE=~/.zhistory
 HISTSIZE=4096
 SAVEHIST=4096
 setopt share_history
@@ -38,12 +38,12 @@ alias yayl="yay -Qe | grep"
 alias yays='yay --sortby votes -Ss'
 
 alias akashi='sudo ntpdate -b ntp.nict.jp && sudo timedatectl set-ntp true'
-alias gear='cd ~/.gearbox'
+alias gear='cd ~/gearbox'
 alias vim='nvim'
 alias ghci='stack ghci'
 
 alias gcc.oit='gcc -std=c89 -Wall -Wextra'
-alias vpn.oit='sudo openfortivpn vpn2.oit.ac.jp:443 --username e1n18095'
+alias vpn.oit='sudo openfortivpn vpn2.oit.ac.jp:443 --username e1n18095 -p'
 alias ssh.oit='ssh e1n18095@o-vnc.center.oit.ac.jp'
 
 # lsd
@@ -69,3 +69,4 @@ if [ -s "/home/blackbracken/.sdkman/bin/sdkman-init.sh" ]; then
   source "/home/blackbracken/.sdkman/bin/sdkman-init.sh"
 fi
 
+xset r rate 260 32
