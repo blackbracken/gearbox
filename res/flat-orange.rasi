@@ -28,9 +28,9 @@
 
 /* global settings and color variables */
 * {
-   maincolor:        #ed8712;
-   highlight:        bold #ed8712;
-   urgentcolor:      #e53714;
+   maincolor:        #085b96; /* ed8712 */
+   highlight:        bold #085b96;
+   urgentcolor:      #1b7bbf; /* e53714 */
 
    fgwhite:          #cfcfcf;
    blackdarkest:     #1d1d1d;
