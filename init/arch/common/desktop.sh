@@ -34,3 +34,6 @@ ln -sf $HOME/gearbox/config/rofi $HOME/.config/rofi
 # settings for tint2
 rm -rf $HOME/.config/tint2
 ln -sf $HOME/gearbox/config/tint2 $HOME/.config/tint2
+
+# settings for libinput
+sudo cp ~/gearbox/config/xorg.conf.d/30-touchpad.conf /etc/X11/xorg.conf.d/
