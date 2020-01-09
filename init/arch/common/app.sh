@@ -8,5 +8,6 @@ yay --needed -S firefox \
                 gnome-multi-writer \
                 gnome-screenshot \
                 gedit \
-                jetbrains-toolbox
+                jetbrains-toolbox \
+                tmux 
 # disabled: spotify
