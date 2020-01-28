@@ -2,6 +2,8 @@
 nerd-fonts-noto-sans-mono
 adobe-source-code-pro-fonts
 powerline-fonts
+otf-ipafont
+noto-fonts-emoji
 
 # development
 neovim
@@ -16,6 +18,11 @@ tokei
 ntpdate
 zip
 unzip
+
+# japanize
+fcitx-mozc
+fcitx-im
+fcitx-configtool
 
 # shell
 zsh
