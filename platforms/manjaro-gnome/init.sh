@@ -5,7 +5,7 @@ sudo pacman -Syu
 sudo pacman --needed -S base-devel yay
 
 # common packages
-# yay --needed -S `cat pkg.txt | egrep -v "^#.*|^$"`
+yay --needed -S `cat pkg.txt | egrep -v "^#.*|^$"`
 
 # dotfiles
 for dotfile in $(ls -A dotfiles); do
