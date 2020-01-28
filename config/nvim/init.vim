@@ -46,6 +46,7 @@ set smarttab
 
 " formatting extension
 autocmd BufNewFile,BufRead Makefile runtime! filetype/makefile.vim
+autocmd Filetype           js       runtime! filetype/js.vim
 autocmd Filetype           sh       runtime! filetype/shell.vim
 
 " encode

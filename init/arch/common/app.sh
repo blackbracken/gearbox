@@ -9,5 +9,7 @@ yay --needed -S firefox \
                 gnome-screenshot \
                 gedit \
                 jetbrains-toolbox \
-                tmux 
+                tmux \
+                obs-studio \
+                vlc
 # disabled: spotify
