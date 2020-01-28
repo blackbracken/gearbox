@@ -1,0 +1,1 @@
+# Gearbox for manjaro-gnome
