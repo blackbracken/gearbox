@@ -1,0 +1,33 @@
+# font
+nerd-fonts-noto-sans-mono
+adobe-source-code-pro-fonts
+powerline-fonts
+
+# development
+neovim
+jetbrains-toolbox
+docker
+docker-compose
+
+# command
+lsd
+bat
+tokei
+ntpdate
+zip
+unzip
+
+# shell
+zsh
+
+# cui tool
+powerline-rs
+tmux
+
+# gui app
+alacritty
+slack-desktop
+discord
+openfortivpn
+gnome-multi-writer
+obs-studio
