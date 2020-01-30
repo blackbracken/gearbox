@@ -8,6 +8,7 @@ noto-fonts-emoji
 # development
 neovim
 jetbrains-toolbox
+mariadb
 docker
 docker-compose
 
