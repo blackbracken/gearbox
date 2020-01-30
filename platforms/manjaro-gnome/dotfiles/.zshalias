@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+alias :q='exit'
+alias :Q='exit'
+alias plz='sudo $(fc -ln -1)'
+
+alias yayi='yay -S'
+alias yayl="yay -Qe | grep"
+alias yays='yay --sortby votes -Ss'
+
+alias topd='cd $(git rev-parse --show-toplevel)'
+alias vim='nvim'
+alias untar='tar -zxvf'
+alias akashi='sudo ntpdate -b ntp.nict.jp && sudo timedatectl set-ntp true'
+
+alias gcc.oit='gcc -std=c89 -Wall -Wextra'
+alias vpn.oit='sudo openfortivpn vpn2.oit.ac.jp:443 --username e1n18095'
+alias ssh.oit='ssh e1n18095@o-vnc.center.oit.ac.jp'

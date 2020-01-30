@@ -14,7 +14,8 @@ SAVEHIST=4096
 setopt share_history
 setopt hist_ignore_space
 setopt hist_ignore_all_dups
-
+setopt print_exit_value
+setopt auto_cd
 setopt auto_pushd
 setopt magic_equal_subst
 setopt prompt_subst
@@ -27,22 +28,7 @@ bindkey "^[[3~" delete-char
 bindkey "^[[1;5C" forward-word
 bindkey "^[^[[D" backward-word
 
-alias :q='exit'
-alias :Q='exit'
-alias topd='cd $(git rev-parse --show-toplevel)'
-alias untar='tar -zxvf'
-alias plz='sudo $(fc -ln -1)'
-
-alias yayi='yay -S'
-alias yayl="yay -Qe | grep"
-alias yays='yay --sortby votes -Ss'
-
-alias akashi='sudo ntpdate -b ntp.nict.jp && sudo timedatectl set-ntp true'
-alias vim='nvim'
-
-alias gcc.oit='gcc -std=c89 -Wall -Wextra'
-alias vpn.oit='sudo openfortivpn vpn2.oit.ac.jp:443 --username e1n18095 -p'
-alias ssh.oit='ssh e1n18095@o-vnc.center.oit.ac.jp'
+source $HOME/.zshalias
 
 # lsd
 if type 'lsd' > /dev/null 2>&1; then  
