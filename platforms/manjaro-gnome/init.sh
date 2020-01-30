@@ -29,5 +29,10 @@ sudo systemctl enable docker
 sudo systemctl start docker
 sudo usermod -aG docker $(whoami)
 
+# mariadb
+sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+sudo systemctl enable mariadb
+sudo systemctl start mariadb
+
 # zsh
 [[ `echo $SHELL | grep 'zsh'` ]] || chsh -s /bin/zsh
