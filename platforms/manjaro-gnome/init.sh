@@ -1,8 +1,8 @@
 #!/bin/bash
 cd `dirname $0`
 
-sudo pacman -Syu
 sudo pacman --needed -S base-devel yay
+yay
 
 # common packages
 yay --needed -S `cat pkg.txt | egrep -v "^#.*|^$"`
@@ -23,6 +23,10 @@ done
 
 # gnome settings
 gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
+gsettings set org.gnome.desktop.interface show-battery-percentage true
+gnome-extensions enable `gnome-extensions list | grep launch-new-instance`
+gnome-extensions disable `gnome-extensions list | grep dash-to-dock`
+gnome-extensions disable `gnome-extensions list | grep arc-menu`
 
 # docker
 sudo systemctl enable docker
