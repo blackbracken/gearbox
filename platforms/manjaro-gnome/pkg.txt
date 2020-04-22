@@ -11,6 +11,7 @@ jetbrains-toolbox
 mariadb
 docker
 docker-compose
+npm
 
 # command
 lsd
@@ -39,3 +40,4 @@ discord
 openfortivpn
 gnome-multi-writer
 obs-studio
+code
