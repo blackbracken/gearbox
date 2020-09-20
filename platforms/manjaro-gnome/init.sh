@@ -14,7 +14,7 @@ for dotfile in $(ls -A dotfiles); do
   echo "Set the symbolic: $dotfile"
 done
 
-# config
+# files located in ~/.config
 for config in $(ls config); do
   rm -rf $HOME/.config/$config
   ln -sf `pwd`/config/$config $HOME/.config;
@@ -32,11 +32,6 @@ gnome-extensions disable `gnome-extensions list | grep arc-menu`
 sudo systemctl enable docker
 sudo systemctl start docker
 sudo usermod -aG docker $(whoami)
-
-# mariadb
-sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-sudo systemctl enable mariadb
-sudo systemctl start mariadb
 
 # zsh
 [[ `echo $SHELL | grep 'zsh'` ]] || chsh -s /bin/zsh
