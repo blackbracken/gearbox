@@ -36,6 +36,7 @@ tmux
 
 # gui app
 alacritty
+firefox
 slack-desktop
 discord
 openfortivpn
