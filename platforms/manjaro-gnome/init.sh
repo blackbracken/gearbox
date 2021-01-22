@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/bash
 cd `dirname $0`
 
 sudo pacman --needed -S base-devel yay
@@ -6,6 +6,8 @@ yay
 
 # common packages
 yay --needed -S `cat pkg.txt | egrep -v "^#.*|^$"`
+
+rustup toolchain install stable
 
 # dotfiles
 for dotfile in $(ls -A dotfiles); do

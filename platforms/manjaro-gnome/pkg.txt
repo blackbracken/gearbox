@@ -12,6 +12,7 @@ mariadb
 docker
 docker-compose
 npm
+rustup
 
 # command
 lsd
