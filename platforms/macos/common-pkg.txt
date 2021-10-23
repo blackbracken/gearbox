@@ -1,0 +1,6 @@
+fish
+
+neovim
+
+pngquant
+optipng

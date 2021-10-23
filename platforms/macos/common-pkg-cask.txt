@@ -1,0 +1,5 @@
+# gui packages
+alacritty
+
+jetbrains-toolbox
+visual-studio-code
