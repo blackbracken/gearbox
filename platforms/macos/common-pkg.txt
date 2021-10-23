@@ -1,9 +1,6 @@
-fish
-
-neovim
-
 bat
 tokei
+exa
 
 pngquant
 optipng

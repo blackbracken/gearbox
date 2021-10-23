@@ -3,3 +3,8 @@ alacritty
 
 jetbrains-toolbox
 visual-studio-code
+
+font-jetbrains-mono
+font-jetbrains-mono-nerd-font
+
+android-platform-tools
