@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 set -eu
 
 FILE_SHELLS="/etc/shells"
