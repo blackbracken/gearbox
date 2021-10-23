@@ -21,4 +21,5 @@ brew install --cask `cat common-pkg-cask.txt | egrep -v "^#.*|^$"`
 chmod 755 scripts/*.sh
 ./scripts/install-fish.sh
 ./scripts/install-neovim.sh
+./scripts/install-sdkman.sh
 ./scripts/install-rust.sh
