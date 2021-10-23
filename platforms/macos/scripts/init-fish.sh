@@ -12,3 +12,9 @@ fi
 if [ `which fish` != "${SHELL}" ]; then
   chsh -s `which fish`
 fi
+
+if fish -c "fisher"; then
+  fish -c "fisher update"
+else
+  fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"
+fi
