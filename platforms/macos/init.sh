@@ -18,8 +18,9 @@ brew tap homebrew/cask-fonts
 brew install `cat common-pkg.txt | egrep -v "^#.*|^$"`
 brew install --cask `cat common-pkg-cask.txt | egrep -v "^#.*|^$"`
 
-chmod 755 scripts/*.sh
+chmod +x scripts/*.sh
 ./scripts/install-fish.sh
 ./scripts/install-neovim.sh
 ./scripts/install-sdkman.sh
 ./scripts/install-rust.sh
+./scripts/install-scala.sh

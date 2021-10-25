@@ -1,6 +1,10 @@
+tmux
+
 bat
 tokei
 exa
+
+peco
 
 pngquant
 optipng
