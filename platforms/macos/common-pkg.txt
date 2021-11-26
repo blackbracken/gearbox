@@ -1,8 +1,7 @@
-tmux
-
 bat
 tokei
 exa
+bottom
 
 peco
 
