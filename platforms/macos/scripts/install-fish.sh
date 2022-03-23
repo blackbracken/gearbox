@@ -48,15 +48,17 @@ if fish -c "fisher" > /dev/null 2>&1; then
   fish -c "fisher update"
 else
   fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"
-fi
 
-plugins=(
+  plugins=(
     "oh-my-fish/theme-bobthefish"
     "jethrokuan/z"
-)
-for plugin in ${plugins[@]}; do
+  )
+
+  for plugin in ${plugins[@]}; do
     fish -c "fisher install $plugin"
-done
+  done
+fi
+
 
 mkdir -p $HOME/.config/fish
 rm -f $HOME/.config/fish/config.fish

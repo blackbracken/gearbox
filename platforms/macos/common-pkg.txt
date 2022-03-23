@@ -1,9 +1,0 @@
-bat
-tokei
-exa
-bottom
-
-peco
-
-pngquant
-optipng
