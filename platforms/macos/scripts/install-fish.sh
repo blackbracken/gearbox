@@ -50,6 +50,14 @@ else
   fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"
 fi
 
+plugins=(
+    "oh-my-fish/theme-bobthefish"
+    "jethrokuan/z"
+)
+for plugin in ${plugins[@]}; do
+    fish -c "fisher install $plugin"
+done
+
 mkdir -p $HOME/.config/fish
 rm -f $HOME/.config/fish/config.fish
 ln -sf `pwd`/config/fish/config.fish $HOME/.config/fish/config.fish
