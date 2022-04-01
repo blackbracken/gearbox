@@ -9,6 +9,7 @@ fi
 
 taps=(
     homebrew/cask-fonts
+    wez/wezterm
 )
 for tap in ${taps[@]}; do
     brew tap $tap
@@ -36,6 +37,7 @@ casks=(
     android-platform-tools
     spotify
     deepl
+    wez/wezterm/wezterm
 )
 for cask in ${casks[@]}; do
     brew install --cask $cask
