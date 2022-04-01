@@ -29,15 +29,12 @@ for formula in ${formulas[@]}; do
 done
 
 casks=(
-    alacritty
     jetbrains-toolbox
     visual-studio-code
-    font-jetbrains-mono
-    font-jetbrains-mono-nerd-font
+    wez/wezterm/wezterm
     android-platform-tools
     spotify
     deepl
-    wez/wezterm/wezterm
 )
 for cask in ${casks[@]}; do
     brew install --cask $cask
