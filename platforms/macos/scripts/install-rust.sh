@@ -7,3 +7,6 @@ end
 if ! contains $HOME/.cargo/bin $fish_user_paths
   set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
 end
+
+rustup install nightly
+rustup default nightly
