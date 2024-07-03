@@ -1,0 +1,14 @@
+[user]
+	name = blackbracken
+	email = me@bracken.black
+[core]
+    autocrlf = input
+[difftool]
+    prompt = false
+    trustExitCode = true
+[diff]
+    tool = nvimdiff
+[difftool "nvimdiff"]
+    cmd = "nvim -dR \"$LOCAL\" \"$REMOTE\""
+[push]
+	autoSetupRemote = true

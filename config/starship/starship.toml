@@ -1,0 +1,34 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+format = """
+$directory[ ](fg:#3F3F3F)\
+$git_branch\
+$git_status\
+$character\
+"""
+
+[package]
+disabled = true
+
+[line_break]
+disabled = true
+
+[character]
+success_symbol = "[●](bold green)"
+
+[directory]
+style = "fg:#EFEFEF bg:#3F3F3F"
+format = "[ $path ]($style)"
+truncation_length = 2
+truncation_symbol = "…/"
+
+[git_branch]
+format = "[$symbol$branch(:$remote_branch)]($style) "
+style = "bold cyan"
+# ignore_branches = ["master"]
+
+[git_status]
+format = "[$all_status$ahead_behind]($style) "
+modified = "!" # "»"
