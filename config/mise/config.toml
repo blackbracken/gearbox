@@ -1,0 +1,8 @@
+[tools]
+node = "latest"
+java = "openjdk-21"
+kotlin = "latest"
+rust = "latest"
+go = "1.24"
+
+"npm:@anthropic-ai/claude-code" = "latest"
