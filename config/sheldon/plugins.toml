@@ -25,6 +25,3 @@ commit = "2c217f4f5de74232f5641b8f4187e4d2f566a562"
 [plugins.z]
 github = "rupa/z"
 commit = "b82ac78a2d4457d2ca09973332638f123f065fd1"
-
-[plugins.zsh-sdkman]
-github = "ptavares/zsh-sdkman"
